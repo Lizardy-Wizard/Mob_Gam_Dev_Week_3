@@ -6,6 +6,7 @@ public class TapDoubleTap : MonoBehaviour
 {
     // Start is called before the first frame update
 
+    // This is a test to see if it's on my computer
 
     float tapTimer = 0f;
     public float doubleTapInterval = 0.2f;
