@@ -15,7 +15,7 @@ public class TapDoubleTap : MonoBehaviour
 
     void Start()
     {
-        
+       this.GetComponent<Renderer>().material.color = Random.ColorHSV(); 
     }
 
     // Update is called once per frame
