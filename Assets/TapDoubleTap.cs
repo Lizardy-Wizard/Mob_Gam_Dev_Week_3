@@ -5,7 +5,8 @@ using UnityEngine;
 public class TapDoubleTap : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    
+    //Is this working?
 
     float tapTimer = 0f;
     public float doubleTapInterval = 0.2f;
