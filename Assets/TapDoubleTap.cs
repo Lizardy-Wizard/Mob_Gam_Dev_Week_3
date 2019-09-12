@@ -13,6 +13,7 @@ public class TapDoubleTap : MonoBehaviour
     bool tapped = false;
     public int intHealth = 3;
     public int intCounter = 0;
+    
 
 
     void Start()
