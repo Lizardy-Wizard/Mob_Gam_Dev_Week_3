@@ -13,6 +13,7 @@ public class TapDoubleTap : MonoBehaviour
     bool tapped = false;
     public int intHealth = 3;
     public int intCounter = 0;
+    public int intEnemyCount = 10;
     
 
 
@@ -43,6 +44,11 @@ public class TapDoubleTap : MonoBehaviour
                 tapped = true;
             }
         }
+        if (intEnemyCount <= 0){
+            
+        }
+
+
     }
 
 
@@ -53,6 +59,7 @@ public class TapDoubleTap : MonoBehaviour
         Debug.Log("Health is at " + intHealth);
         if (intHealth <= 0){
             intCounter+= 1;
+            intEnemyCount -= 1;
             this.GetComponent<Renderer>().material.color = Random.ColorHSV();
             this.transform.localScale += Vector3.one * 0.1f;
             intHealth += intCounter;
@@ -68,6 +75,7 @@ public class TapDoubleTap : MonoBehaviour
         if (intHealth <= 0){
             intCounter += 1;
             intHealth = 3;
+            intEnemyCount -= 1;
             this.GetComponent<Renderer>().material.color = Random.ColorHSV();
             this.transform.localScale += Vector3.one * 0.1f;
             intHealth += intCounter;

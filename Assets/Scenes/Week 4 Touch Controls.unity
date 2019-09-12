@@ -207,7 +207,6 @@ GameObject:
   - component: {fileID: 1268333606}
   - component: {fileID: 1268333605}
   - component: {fileID: 1268333609}
-  - component: {fileID: 1268333610}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -299,22 +298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f84cc431a174672a2823db32ea84b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1268333610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1268333604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c5af4df4c14b42769aef0443b7812e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleTapInterval: 0.5
-  intHealth: 3
-  intCounter: 0
-  intEnemyCount: 10
 --- !u!1 &1755090271
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +379,6 @@ GameObject:
   - component: {fileID: 2024466769}
   - component: {fileID: 2024466768}
   - component: {fileID: 2024466767}
-  - component: {fileID: 2024466771}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -477,19 +459,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90.00001, z: -90.00001}
---- !u!114 &2024466771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024466766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c5af4df4c14b42769aef0443b7812e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  doubleTapInterval: 0.2
-  intHealth: 3
-  intCounter: 0
-  intEnemyCount: 10

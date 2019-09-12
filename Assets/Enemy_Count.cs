@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class testscript : MonoBehaviour
+public class Enemy_Count : MonoBehaviour
 {
+
+    public int intEnenmyCount = 10;
+
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Hello World!");
-        Debug.Log("Edited from GitHub");
+        
     }
 
     // Update is called once per frame
