@@ -11,11 +11,14 @@ public class TapDoubleTap : MonoBehaviour
     float tapTimer = 0f;
     public float doubleTapInterval = 0.2f;
     bool tapped = false;
+    public int intHealth = 3;
+    public int intCounter = 0;
 
 
     void Start()
     {
-       this.GetComponent<Renderer>().material.color = Random.ColorHSV(); 
+        
+       this.GetComponent<Renderer>().material.color = Random.ColorHSV();
     }
 
     // Update is called once per frame
@@ -45,17 +48,34 @@ public class TapDoubleTap : MonoBehaviour
     void SingleTap(){
         Debug.Log("<color=red>Single Tap!</color>");
         Debug.Log("Timer = " + tapTimer);
-
+        intHealth -= 1;
+        Debug.Log("Health is at " + intHealth);
+        if (intHealth <= 0){
+            intCounter+= 1;
+            this.GetComponent<Renderer>().material.color = Random.ColorHSV();
+            this.transform.localScale += Vector3.one * 0.1f;
+            intHealth += intCounter;
+        }
         tapTimer = 0;
         }
 
     void DoubleTap(){
         Debug.Log("<color=blue>Double Tap!</color>");
         Debug.Log("Timer = " + tapTimer);
-        this.GetComponent<Renderer>().material.color = Random.ColorHSV();
-        this.transform.localScale += Vector3.one * 0.1f;
+        intHealth -= 2;
+        Debug.Log("Health is at " + intHealth);
+        if (intHealth <= 0){
+            intCounter += 1;
+            intHealth = 3;
+            this.GetComponent<Renderer>().material.color = Random.ColorHSV();
+            this.transform.localScale += Vector3.one * 0.1f;
+            intHealth += intCounter;
+        }
+        
         if(this.transform.localScale.x > 5) {
             this.transform.localScale = Vector3.one;
+            intHealth = 3;
+            intCounter = 0;
         }
         tapTimer = 0;
     }
